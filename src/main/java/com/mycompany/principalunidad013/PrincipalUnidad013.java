@@ -10,27 +10,81 @@ import java.util.Scanner;
  * @author usuario
  */
 public class PrincipalUnidad013 {
+    
 
     public static void main(String[] args) {
+        
 
-        var entrada = new Scanner(System.in);
-        System.out.println("ingrese la dimension del arreglo");
-        var extension = entrada.nextInt();
-        var arreglo = new int[extension];
+        var arreglo1 = new Arreglo();
 
-        for (int i = 0; i < extension; i++) {
-            System.out.println("Ingrese los datos del vector en la poscicion " + i);
-            var numero = entrada.nextInt();
-            
-            
-            arreglo[i] = numero;
-            
+        var vector1 = arreglo1.crearVector(3);
+        System.out.println("Vector 1: ");
+        for (int i = 0; i < vector1.length; i++) {
+            System.out.print(vector1[i] + " ");
         }
-        System.out.println("el arreglo ingresado es: ");
-        for (int i = 0; i < extension; i++) {
-            System.out.println(arreglo[i]);
-        } 
+        var arreglo2 = new Arreglo();
+        System.out.print("\n");
+        var vector2 = arreglo2.crearVector(3);
+        System.out.println("Vector 2: ");
+        for (int i = 0; i < vector2.length; i++) {
+            System.out.print(vector2[i] + " ");
+        }
+        System.out.print("\n");
+        var arreglo3 = new Arreglo();
+        var vectorSumado = arreglo3.sumaVector(vector1, vector2);
+        System.out.println("El vector resultante es: ");
+        for (int i = 0; i < vector2.length; i++) {
+            System.out.print(vectorSumado[i] + " ");
+        }
+        System.out.print("\n");
+        var arreglo4 = new Arreglo();
+        var matriz1 = arreglo4.crearMatriz(3, 4);
+        System.out.println("Matriz 1: ");
+        for (int i = 0; i < matriz1.length; i++) {
+            for (int j = 0; j < matriz1.length; j++) {
 
+                System.out.print(matriz1[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
+        var arreglo5 = new Arreglo();
+        System.out.print("\n");
+        
+        var matriz2 = arreglo5.crearMatriz(3, 4);
+        System.out.println("Matriz 2: ");
+        for (int i = 0; i < matriz2.length; i++) {
+            for (int j = 0; j < matriz2.length; j++) {
+                System.out.print(matriz2[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
+        var arreglo6 = new Arreglo();
+        var matrizSumada = arreglo6.sumaMatriz(matriz1, matriz2);
+        System.out.println("\nLa matriz resultante es:");
+        for (int i = 0; i < matriz2.length; i++) {
+            for (int j = 0; j < matriz2.length; j++) {
+                System.out.print(matrizSumada[i][j] + " ");
+            }
+            System.out.print("\n");
+        }
     }
+            
+      
+    
+        
+    
 }
+
+    
+            
+                
+           
+       
+   
+        
+        
+        
+
+
+
 
